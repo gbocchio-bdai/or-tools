@@ -1695,7 +1695,7 @@ class OR_DLL RoutingModel {
 
    private:
     const RoutingModel& routing_model_;
-#if __cplusplus >= 202002L
+#if __cplusplus >= 202100L
     static constexpr std::vector<int> empty_neighbors_ = {};
 #else
     inline static const std::vector<int> empty_neighbors_ = {};
