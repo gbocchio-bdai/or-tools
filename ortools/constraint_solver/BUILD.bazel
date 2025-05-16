@@ -417,12 +417,9 @@ cc_library(
         "routing_lp_scheduling.h",
         "routing_search.h",
     ],
-    copts = select({
-        "on_linux": [],
-        "on_macos": [],
-        "on_windows": ["/Zc:preprocessor"],
-        "//conditions:default": [],
-    }),
+    copts = [
+        "-std=c++17"
+    ],
     deps = [
         ":cp",
         ":routing_enums_cc_proto",
